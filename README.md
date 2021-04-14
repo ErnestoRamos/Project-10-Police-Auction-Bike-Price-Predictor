@@ -11,4 +11,4 @@ This project has three main parts :
 3. templates - This folder contains the HTML template to allow user to enter employee detail and displays the predicted bike price.
 
 Test out the api here:
-https://bike-price-predictor.herokuapp.com/predict
+https://bike-price-predictor.herokuapp.com/
