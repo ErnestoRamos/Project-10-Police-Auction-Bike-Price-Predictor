@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style2.css') }}">
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Police Auction Bike Price Predictor</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="brand" placeholder="Brand" required="required" />
+      <input type="text" name="model" placeholder="Model" required="required" />
+		  <input type="text" name="speed" placeholder="Speed" required="required" />
+      <input type="text" name="timetilend" placeholder="Time Remaining (days)" required="required" />
+      <input type="text" name="current bid count" placeholder="Bid Count" required="required" />
+      <input type="text" name="stand over height" placeholder="Stand Over Height (inches)" required="required" />
+      <input type="text" name="gear shifter brand" placeholder="Gear Shifter Brand" required="required" />
+      <input type="text" name="front derailleur brand" placeholder="Front Derailleur Brand" required="required" />        
+      <input type="text" name="rear derailleur brand" placeholder="Rear Derailleur Brand" required="required" />
+      <input type="text" name="brake lever brand" placeholder="Brake Lever Brand" required="required" />
+      <input type="text" name="crank set brand" placeholder="Crank Set Brand" required="required" />
+      <input type="text" name="brake type" placeholder="Brake Type" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
