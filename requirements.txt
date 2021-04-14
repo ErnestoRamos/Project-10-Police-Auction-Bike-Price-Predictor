@@ -7,5 +7,6 @@ scikit-learn==0.23.1
 jsonify==0.5
 joblib==1.0.1
 pandas==1.2.4
+xgboost==1.4
 flask_render_specific_template==1.0
 Werkzeug==0.16.0
